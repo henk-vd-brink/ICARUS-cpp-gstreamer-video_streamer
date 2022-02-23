@@ -1,0 +1,3 @@
+/home/pi/repos/gstreamer-stream_to_browser/build/CMakeFiles/rebuild_cache.dir
+/home/pi/repos/gstreamer-stream_to_browser/build/CMakeFiles/cpp-gstreamer-stream_to_localhost.dir
+/home/pi/repos/gstreamer-stream_to_browser/build/CMakeFiles/edit_cache.dir

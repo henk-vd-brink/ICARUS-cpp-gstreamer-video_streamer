@@ -1,6 +1,13 @@
 FROM ubuntu:18.04
 
-RUN apt-get install libgstreamer1.0-dev \
+ARG DEBIAN_FRONTEND=noninteractive
+
+ENV TZ=Europe
+
+RUN apt-get update
+ 
+
+RUN apt-get install -y libgstreamer1.0-dev \
 	libgstreamer-plugins-base1.0-dev \
 	libgstreamer-plugins-bad1.0-dev \
 	gstreamer1.0-plugins-base \
@@ -12,27 +19,22 @@ RUN apt-get install libgstreamer1.0-dev \
 	gstreamer1.0-tools \
 	gstreamer1.0-x \
 	gstreamer1.0-alsa \
-	gstreame-1.0-gl \
+	gstreamer1.0-gl \
 	gstreamer1.0-gtk3 \
 	gstreamer1.0-qt5 \ 
 	gstreamer1.0-pulseaudio
 
-RUN apt-get install python3.8
+RUN apt-get install cmake -y
 
 WORKDIR /code
 
-RUN mkdir hlstest
-
-RUN 
-
+ADD CMakeLists.txt .
+COPY src /code/src 
 
 
+WORKDIR /code/build
 
-
-
-
-
-
-
+RUN cmake .. && make
+CMD ./cpp-gstreamer-stream_to_localhost /dev/video0
 
 

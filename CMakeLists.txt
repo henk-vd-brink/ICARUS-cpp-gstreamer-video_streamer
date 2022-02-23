@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME cpp-gstreamer-stream_to_localhost)
 set(CMAKE_CXX_STANDARD 14)

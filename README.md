@@ -1,14 +1,14 @@
 ## About the Project
 This repository contains a dockerized Gstreamer pipeline implemented in C++. The pipeline can be adjusted to send to a arbitrary ip.
 
-## Installation
+## Getting Started
 
 ### Preqrequisites
 - Docker
 - Linux device (e.g. Raspberry Pi)
 - USB camera
 
-### Build
+### Installation
 ```
 git clone https://github.com/henk-vd-brink/ICARUS-cpp-video_stream.git
 cd ICARUS-cpp-video_stream

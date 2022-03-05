@@ -1,5 +1,5 @@
 ## About the Project
-This repository contains a dockerized Gstreamer pipeline implemented in C++. The pipeline can be adjusted to send to a arbitrary ip.
+This repository contains a dockerized Gstreamer pipeline implemented in C++. The pipeline can be adjusted to send to an arbitrary ip.
 
 ## Getting Started
 
@@ -36,8 +36,7 @@ Receive:
  gst-launch-1.0 -e udpsrc port=5000 ! application/x-rtp,media=video,clock-rate=90000,encoding-name=H264,payload=96 ! rtph264depay ! avdec_h264 ! jpegenc ! avimux ! filesink location=mjpeg.avi
 ```
 
-### 
-Inspect camera
+### Inspect camera
 
 Possible caps
 ```

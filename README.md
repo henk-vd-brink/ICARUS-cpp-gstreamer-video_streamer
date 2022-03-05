@@ -1,5 +1,5 @@
 ## About the Project
-This repository contains a dockerized Gstreamer pipeline implemented in C++. The pipeline can be adjusted to send to a arbitrary ip.
+This repository contains a dockerized Gstreamer pipeline implemented in C++. The pipeline can be adjusted to send to an arbitrary ip.
 
 ## Getting Started
 

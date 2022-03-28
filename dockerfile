@@ -39,7 +39,7 @@ ENV GST_DEBUG=4
 RUN cmake .. && make
 
 #CMD ./cpp-gstreamer-stream_to_localhost /dev/video0
-CMD gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,height=720,width=1280,framerate=10/1 ! decodebin ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=192.168.178.34 port=5000
+CMD gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,height=720,width=1280,framerate=10/1 ! decodebin ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! multiudpsink clients="192.168.178.200:6000,192.168.178.201:6000" sync=false
 
 
 

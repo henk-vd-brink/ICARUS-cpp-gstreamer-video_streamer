@@ -36,7 +36,7 @@ USER gstreamer_user
 
 CMD gst-launch-1.0 v4l2src device=/dev/video0 \
 	! videoconvert \
-	! video/x-raw,height=720,width=1280 \
+	! video/x-raw,height=1080,width=1920 \
 	! videoscale \
 	! video/x-raw,height=270,width=480 \
 	! videoconvert \

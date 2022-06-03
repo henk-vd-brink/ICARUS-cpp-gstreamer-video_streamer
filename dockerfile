@@ -1,3 +1,4 @@
+
 FROM ubuntu:18.04
 
 ENV TZ=Europe
@@ -34,11 +35,11 @@ RUN useradd gstreamer_user \
 USER gstreamer_user
 
 CMD gst-launch-1.0 v4l2src device=/dev/video0 \
+	! videoconvert \
 	! video/x-raw,height=720,width=1280 \
-	! decodebin \
 	! videoscale \
 	! video/x-raw,height=270,width=480 \
 	! videoconvert \
 	! x264enc tune=zerolatency \
 	! rtph264pay \
-	! multiudpsink clients="172.16.5.152:3100" sync=false
+	! multiudpsink clients="192.168.0.210:3100" sync=false

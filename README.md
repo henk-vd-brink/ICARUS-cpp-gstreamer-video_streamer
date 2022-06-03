@@ -16,12 +16,12 @@ cd ICARUS-cpp-video_streamer
 
 ### Build
 ```
-make build-container
+docker build -t icarus-cpp-streamer-image .
 ```
 
 ### Run
 ```
-make run
+docker run --name icarus-cpp-streamer --device /dev/video0 -d --privileged icarus-cpp-streamer-image
 ```
 
 ## Additional Information
@@ -42,8 +42,3 @@ Possible caps
 ```
 v4l2-ctl -d /dev/video0 --list-formats-ext
 ```
-
-
-
-
-

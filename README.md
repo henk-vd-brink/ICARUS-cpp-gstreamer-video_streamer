@@ -36,6 +36,15 @@ h264 stream to file:
  gst-launch-1.0 -e udpsrc port=5000 ! application/x-rtp,media=video,clock-rate=90000,encoding-name=H264,payload=96 ! rtph264depay ! avdec_h264 ! jpegenc ! avimux ! filesink location=mjpeg.avi
 ```
 
+h264 stream to screen (Linux)
+```
+gst-launch-1.0 -vv udpsrc port=6502 ! application/x-rtp,payload=96 ! rtph264depay ! avdec_h264 ! videoconvert ! xvimagesink sync=false
+```
+
+h264 stream to screen (Windows)
+```
+gst-launch-1.0 -vv udpsrc port=6502 ! application/x-rtp,payload=96 ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false
+```
 ### Inspect Camera
 
 Possible caps

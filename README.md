@@ -45,6 +45,17 @@ h264 stream to screen (Windows)
 ```
 gst-launch-1.0 -vv udpsrc port=6502 ! application/x-rtp,payload=96 ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false
 ```
+
+VLC test.sdp
+```
+v=0
+c=IN IP4 127.0.0.1
+m=video 3100 RTP/AVP 96 
+a=rtpmap:96 H264/90000
+```
+
+
+
 ### Inspect Camera
 
 Possible caps

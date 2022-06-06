@@ -1,30 +1,32 @@
 ## About the Project
 This repository contains a containerized gstreamer pipeline.
 
-src: /dev/video0 \
-sink: multiudpsink clients="192.168.0.47:3100"
+default src: /dev/video0 \
+default sink: multiudpsink clients="192.168.0.47:3100"
+
+See Dockerfile for more information.
 
 ## Getting Started
 
 ### Preqrequisites
-- Docker
 - Linux device
+- Docker
 - USB camera
 
 ### Installation
 ```
-git clone https://github.com/henk-vd-brink/ICARUS-cpp-gstreamer-video_streamer.git
-cd ICARUS-cpp-gstreamer-video_streamer
+git clone https://github.com/henk-vd-brink/ICARUS-gstreamer-video_streamer.git
+cd ICARUS-gstreamer-video_streamer
 ```
 
 ### Build
 ```
-docker build -t icarus-cpp-streamer-image .
+docker build -t icarus-vs-image.
 ```
 
 ### Run
 ```
-docker run --name icarus-cpp-streamer --device /dev/video0 -d --privileged icarus-cpp-streamer-image
+docker run --name icarus-vs --device /dev/video0 -d icarus-vs-image
 ```
 
 ## Additional Information

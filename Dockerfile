@@ -6,7 +6,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
 	&& apt-get install -y \
-		cmake \
 		libgstreamer1.0-dev \
 		libgstreamer-plugins-base1.0-dev \
 		libgstreamer-plugins-bad1.0-dev \
@@ -41,4 +40,4 @@ CMD gst-launch-1.0 v4l2src device=/dev/video0 \
 	! videoconvert \
 	! x264enc tune=zerolatency \
 	! rtph264pay \
-	! multiudpsink clients="192.168.0.210:3100" sync=false
+	! multiudpsink clients="192.168.0.47:3100" sync=false

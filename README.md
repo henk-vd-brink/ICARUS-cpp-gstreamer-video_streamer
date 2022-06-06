@@ -1,5 +1,8 @@
 ## About the Project
-This repository contains a containerized Gstreamer pipeline implementation.
+This repository contains a containerized gstreamer pipeline.
+
+src: /dev/video0 \
+sink: multiudpsink clients="192.168.0.47:3100"
 
 ## Getting Started
 

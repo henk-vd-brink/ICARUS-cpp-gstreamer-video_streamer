@@ -10,8 +10,8 @@ This repository contains a containerized Gstreamer pipeline implementation.
 
 ### Installation
 ```
-git clone https://github.com/henk-vd-brink/ICARUS-cpp-video_streamer.git
-cd ICARUS-cpp-video_streamer
+git clone https://github.com/henk-vd-brink/ICARUS-cpp-gstreamer-video_streamer.git
+cd ICARUS-cpp-gstreamer-video_streamer
 ```
 
 ### Build

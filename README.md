@@ -21,7 +21,7 @@ cd ICARUS-gstreamer-video_streamer
 
 ### Build
 ```
-docker build -t icarus-vs-image.
+docker build -t icarus-vs-image .
 ```
 
 ### Run

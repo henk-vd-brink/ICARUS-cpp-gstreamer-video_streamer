@@ -42,4 +42,4 @@ CMD gst-launch-1.0 v4l2src device=/dev/video0 \
 	! videoconvert \
 	! x264enc tune=zerolatency \
 	! rtph264pay \
-	! multiudpsink clients="192.168.0.47:3100" sync=false
+	! multiudpsink clients="127.0.0.1:3100" sync=false

@@ -26,7 +26,7 @@ docker build -t icarus-vs-image .
 
 ### Run
 ```
-docker run --name icarus-vs --device /dev/video0 -d icarus-vs-image
+docker run --name icarus-vs --device /dev/video0 -d --rm icarus-vs-image
 ```
 
 ## Additional Information

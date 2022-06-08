@@ -32,7 +32,7 @@ RUN useradd gstreamer_user \
 
 USER gstreamer_user
 
-ENV GST_DEBUG 3
+ENV GST_DEBUG 4
 
 CMD gst-launch-1.0 v4l2src device=/dev/video0 \
 	! videoconvert \

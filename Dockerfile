@@ -32,6 +32,8 @@ RUN useradd gstreamer_user \
 
 USER gstreamer_user
 
+ENV GST_DEBUG 3
+
 CMD gst-launch-1.0 v4l2src device=/dev/video0 \
 	! videoconvert \
 	! video/x-raw,height=1080,width=1920 \

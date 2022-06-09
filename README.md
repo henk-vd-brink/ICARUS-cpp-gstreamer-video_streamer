@@ -8,7 +8,7 @@ See Dockerfile for more information.
 
 ## Getting Started
 
-### Preqrequisites
+### Prerequisites
 - Linux device
 - Docker
 - USB camera

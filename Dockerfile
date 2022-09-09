@@ -30,8 +30,7 @@ RUN useradd -m gstreamer_user \
 	&& chmod g+rwx /usr/bin/gst* \
 	&& usermod -a -G video gstreamer_user
 
-ENV GST_DEBUG 4
-
+# ENV GST_DEBUG 4
 
 COPY entrypoints /home/gstreamer_user/entrypoints
 

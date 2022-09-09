@@ -4,5 +4,11 @@ services:
   icarus-gstreamer:
     image: prominendt/icarus:gstreamer-baseimage
     entrypoint: [
-      "/home/gstreamer_user/entrypoints/v4l2src_to_multiudpsink.sh"
+      "/home/gstreamer_user/entrypoints/v4l2src_to_multiudpsink.sh",
+      "-w",
+      "1920",
+      "-h",
+      "1080",
+      "-c",
+      "192.168.178.200:3000"
       ]
